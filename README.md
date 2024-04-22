@@ -3,7 +3,7 @@ Here is described the code used in the analysis and visualization of metaproteom
 
 ## Creating the physeq object
 The raw MS proteomics data have been submitted to the [ProteomeXchange Consortium](http://www.proteomexchange.org) via the Proteomics Identifications Database (PRIDE) partner repository, with the database identifier [PXD029284](https://www.ebi.ac.uk/pride/archive/projects/PXD029284) [^1].
-The peptide, protein and taxonomic identification and quantification was performed using Metalab software. Here, the **BuiltIn_taxa_refine** file from Metalab results is used to performed the analysis in Rstudio. This file contains the identified taxa with at least 2 unique peptides. 
+The peptide, protein and taxonomic identification and quantification was performed using Metalab software [^2]. Here, the **BuiltIn_taxa_refine** file from Metalab results is used to performed the analysis in Rstudio. This file contains the identified taxa with at least 2 unique peptides. 
 - Load the different packages you need to use
   ```
   library(readr)
@@ -192,3 +192,4 @@ The two plot will look like this:
 
 
 [^1]: Perez-Riverol Y, Csordas A, Bai J, Bernal-Llinares M, Hewapathirana S, Kundu DJ, Inuganti A, Griss 142 J, Mayer G, Eisenacher M, Pérez E, Uszkoreit J, Pfeuffer J, Sachsenberg T, Yılmaz Ş, Tiwary S, Cox 143 J, Audain E, Walzer M, Jarnuczak AF, Ternet T, Brazma A, Vizcaíno JA. 2019. The PRIDE database 144 and related tools and resources in 2019: improving support for quantification data. Nucleic Acids 145 Research 47:D442-D450.
+[^2]: Cheng K, Ning Z, Zhang X, Li L, Liao B, Mayne J, Stintzi A, Figeys D. 2017. MetaLab: an automated 121 pipeline for metaproteomic data analysis. Microbiome 5:157.
