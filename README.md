@@ -1,5 +1,5 @@
 # MRA_cystic-fibrosis
-Here is described the code used in the analysis and visualization of metaproteomics data of cystic fibrosis microbiota samples using Rstudio. [Phyloseq package](https://joey711.github.io/phyloseq/) was used as the main tool.
+Here is described the code used in the analysis and visualization of metaproteomics data of cystic fibrosis microbiota samples using Rstudio. [Phyloseq package](https://joey711.github.io/phyloseq/) was used as the main tool. The R script can be found here
 
 ## Creating the physeq object
 The raw MS proteomics data have been submitted to the [ProteomeXchange Consortium](http://www.proteomexchange.org) via the Proteomics Identifications Database (PRIDE) partner repository, with the database identifier [PXD029284](https://www.ebi.ac.uk/pride/archive/projects/PXD029284) [^1].
