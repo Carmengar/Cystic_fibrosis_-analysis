@@ -155,7 +155,25 @@ We cant represent in the graph all the taxa present in the table, so we are goin
 > [!IMPORTANT]  
 > Sometimes this code return a tax_table with some errors in tax rank names. For example:
 > ![tax_table with errors](https://github.com/Carmengar/MRA_cystic-fibrosis/assets/71711674/7c9d42f0-f44c-4f3c-9af1-fb784d43885a)
-> 
+>
+> Instead of rename the rank names of the new category `Other` it rename the species *`sp212`* tax names and the ones in the `Other`category are now *NA*. So we new to correct the names in both.
+>```
+> tax_table(speciesnotNA_relativ)["sp212"]                                    # Identify the species wrongly named
+> tax_tab <- tax_table(species_other)                                         # Extract the tax_table
+> row_idx <- which(row.names(tax_tab) == "sp212")                             # Select the row of the sp212 and of the Other category
+> row_idother <- which(row.names(tax_tab) == "Other")
+> tax_tab[row_idx, "Superkingdom"] <- "Bacteria"                              # Remane each of the ranks with the correct names
+> tax_tab[row_idx, "Kingdom"] <- ""
+> tax_tab[row_idx, "Phylum"] <- "Actinobacteria"
+> tax_tab[row_idx, "Class"] <- "Actinobacteria"
+> tax_tab[row_idx, "Order"] <- "Bifidobacteriales"
+> tax_tab[row_idx, "Family"] <- "Bifidobacteriaceae"
+> tax_tab[row_idx, "Genus"] <- "Bifidobacterium"
+> tax_tab[row_idx, "Species"] <- "Bifidobacterium scardovii"
+> tax_tab[row_idother, "Species"] <- "Other"                                  # Rename the Species rank of the Other category
+> tax_table(species_other) <- tax_tab                                         # Sustitute the tax_table in the object with the corrected one
+> tax_table(species_other)                                                    # Check the new table.
+> ```
 
   
 ## Plotting
@@ -196,7 +214,7 @@ We cant represent in the graph all the taxa present in the table, so we are goin
   scale_fill_manual(name = "Species", values = c(mi_paleta,"#D7CE9F"))+                 # We need to add one more color because the palette only has 20.
   theme(legend.text.align = 0, legend.text = element_text(face = "italic"))             # The names in italic because are species names
   ```
-The two plot will look like this:
+The two plots will look like this:
 ![Taxa representation](https://github.com/Carmengar/MRA_cystic-fibrosis/assets/71711674/1d91181d-6e5f-47da-9415-1ed0eabc9311)
 
 
