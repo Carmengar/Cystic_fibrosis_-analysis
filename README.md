@@ -151,6 +151,12 @@ We cant represent in the graph all the taxa present in the table, so we are goin
   species_other <- merge_taxa2(speciesnotNA_relativ, taxa=namesother_species, name = "Other")
   tax_table(species_other)
   ```
+  This is a note
+> [!IMPORTANT]  
+> Sometimes this code return a tax_table with some errors in tax rank names. For example:
+> ![tax_table with errors](https://github.com/Carmengar/MRA_cystic-fibrosis/assets/71711674/7c9d42f0-f44c-4f3c-9af1-fb784d43885a)
+> 
+
   
 ## Plotting
 - Phylum
