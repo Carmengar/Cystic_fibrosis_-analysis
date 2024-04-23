@@ -151,30 +151,29 @@ We cant represent in the graph all the taxa present in the table, so we are goin
   species_other <- merge_taxa2(speciesnotNA_relativ, taxa=namesother_species, name = "Other")
   tax_table(species_other)
   ```
-  This is a note
+ 
 > [!IMPORTANT]  
 > Sometimes this code return a tax_table with some errors in tax rank names. For example:
-> ![tax_table with errors](https://github.com/Carmengar/MRA_cystic-fibrosis/assets/71711674/7c9d42f0-f44c-4f3c-9af1-fb784d43885a)
->
-> Instead of rename the rank names of the new category `Other` it rename the species *`sp212`* tax names and the ones in the `Other`category are now *NA*. So we new to correct the names in both.
+> ![tax_table with errors](https://github.com/Carmengar/MRA_cystic-fibrosis/assets/71711674/2cdc114e-2c3d-487e-b7ec-b069293b8596)
+> 
+> Instead of rename the rank names of the new category `Other` it rename the species *`sp250`* tax names and the ones in the `Other`category are now *NA*. So we need to correct the names in both.
 >```
-> tax_table(speciesnotNA_relativ)["sp212"]                                    # Identify the species wrongly named
-> tax_tab <- tax_table(species_other)                                         # Extract the tax_table
-> row_idx <- which(row.names(tax_tab) == "sp212")                             # Select the row of the sp212 and of the Other category
+> tax_table(speciesnotNA_relativ)["sp250"]                         # Identify the species wrongly named
+> tax_tab <- tax_table(species_other)                              # Extract the tax_table
+> row_idx <- which(row.names(tax_tab) == "sp250")                  # Select the row of the sp212 and of the Other category
 > row_idother <- which(row.names(tax_tab) == "Other")
-> tax_tab[row_idx, "Superkingdom"] <- "Bacteria"                              # Remane each of the ranks with the correct names
+> tax_tab[row_idx, "Superkingdom"] <- "Bacteria"                   # Remane each of the ranks with the correct names
 > tax_tab[row_idx, "Kingdom"] <- ""
-> tax_tab[row_idx, "Phylum"] <- "Actinobacteria"
-> tax_tab[row_idx, "Class"] <- "Actinobacteria"
-> tax_tab[row_idx, "Order"] <- "Bifidobacteriales"
-> tax_tab[row_idx, "Family"] <- "Bifidobacteriaceae"
-> tax_tab[row_idx, "Genus"] <- "Bifidobacterium"
-> tax_tab[row_idx, "Species"] <- "Bifidobacterium scardovii"
-> tax_tab[row_idother, "Species"] <- "Other"                                  # Rename the Species rank of the Other category
-> tax_table(species_other) <- tax_tab                                         # Sustitute the tax_table in the object with the corrected one
-> tax_table(species_other)                                                    # Check the new table.
+> tax_tab[row_idx, "Phylum"] <- "Firmicutes"
+> tax_tab[row_idx, "Class"] <- "Clostridia"
+> tax_tab[row_idx, "Order"] <- "Clostridiales"
+> tax_tab[row_idx, "Family"] <- "Lachnospiraceae"
+> tax_tab[row_idx, "Genus"] <- "Roseburia"
+> tax_tab[row_idx, "Species"] <- "Roseburia intestinalis"
+> tax_tab[row_idother, "Species"] <- "Other"                       # Rename the Species rank of the Other category
+> tax_table(species_other) <- tax_tab                              # Sustitute the tax_table in the object with the corrected one
+> tax_table(species_other)                                         # Check the new table.
 > ```
-
   
 ## Plotting
 - Phylum
