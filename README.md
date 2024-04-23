@@ -70,7 +70,9 @@ physeq = phyloseq(OTU, TAX)
   Join the new object into physeq
   ```
   physeq = phyloseq(OTU, TAX, sampledata)
+  physeq
   ```
+  You can see the different objects merge in `physeq` an their characteristics:nº of taxa, samples, sample variables and the different taxonomic ranks.
 ## Preprocessing
 In order to continue the analysis a preprocessing step is needed to prepare the data.
 - Order the `Time` variable in the `sampledata` object.
@@ -149,6 +151,7 @@ We cant represent in the graph all the taxa present in the table, so we are goin
   species_other <- merge_taxa2(speciesnotNA_relativ, taxa=namesother_species, name = "Other")
   tax_table(species_other)
   ```
+  
 ## Plotting
 - Phylum
   We have to prepare the data from phyloseq object for plotting using the function `psmelt`. And we put the new categry "Other" at the end.
