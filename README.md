@@ -67,12 +67,16 @@ physeq = phyloseq(OTU, TAX)
   sampledata <- sample_data(metadata)
   row.names(sampledata) <- sample_names(physeq)
   ```
-  Join the new object into physeq
+  Join the new object into `physeq`
   ```
   physeq = phyloseq(OTU, TAX, sampledata)
   physeq
+      phyloseq-class experiment-level object
+      otu_table()   OTU Table:         [ 300 taxa and 30 samples ]
+      sample_data() Sample Data:       [ 30 samples by 4 sample variables ]
+      tax_table()   Taxonomy Table:    [ 300 taxa by 8 taxonomic ranks ]
   ```
-  You can see the different objects merge in `physeq` an their characteristics:nº of taxa, samples, sample variables and the different taxonomic ranks.
+  You can see the different objects merge in `physeq` and their characteristics: nº of taxa, samples, sample variables and the different taxonomic ranks.
 ## Preprocessing
 In order to continue the analysis a preprocessing step is needed to prepare the data.
 - Order the `Time` variable in the `sampledata` object.
