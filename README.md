@@ -1,4 +1,4 @@
-# MRA_cystic-fibrosis
+# Code used for the analysis of cystic fibrosis microbiota samples
 Here is described the code used in the analysis and visualization of metaproteomics data of cystic fibrosis microbiota samples using Rstudio. [Phyloseq package](https://joey711.github.io/phyloseq/) was used as the main tool. The R script can be found [here](RscriptMRA.R).
 
 ## Creating the physeq object
