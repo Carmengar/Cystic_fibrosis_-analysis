@@ -17,8 +17,7 @@ The peptide and protein identification and quantification as well as the taxonom
   ```
 - Load the file in Rstudio
   ```
-  BuiltIn_taxa_refine <- read_delim("K:/BuiltIn.taxa.refine.csv", 
-                                    delim = ";", escape_double = FALSE, trim_ws = TRUE)
+  BuiltIn_taxa_refine <- read_csv("K:/BuiltIn.taxa.refine.csv")
   View(BuiltIn_taxa_refine)
   ```
   ![BuiltIn_taxa_refine](https://github.com/Carmengar/MRA_cystic-fibrosis/assets/71711674/1d7ed589-e2d4-43b0-bd8b-e997ab85cc0a)
