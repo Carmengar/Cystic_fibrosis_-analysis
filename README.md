@@ -3,7 +3,7 @@ The code used in the analysis and visualization of metaproteomic data of cystic 
 
 ## Creating the physeq object
 The raw MS proteomic data have been submitted to the [ProteomeXchange Consortium](http://www.proteomexchange.org) via the Proteomics Identifications Database (PRIDE) partner repository, with the database identifier [PXD029284](https://www.ebi.ac.uk/pride/archive/projects/PXD029284) [^1].
-The peptide and protein identification and quantification as well as the taxonomic and functional analysis was performed using Metalab software [^2]. The **BuiltIn_taxa_refine** file from Metalab results is used to performed the analysis in Rstudio. This file contains the identified taxa with at least 2 unique peptides. 
+The peptide and protein identification and quantification as well as the taxonomic and functional analysis was performed using Metalab software [^2]. The **BuiltIn_taxa_refine** file from Metalab results is used to performed the analysis in Rstudio. This file contains the identified taxa with at least 2 unique peptides and can be found [here](RscriptMRA.R). 
 - Load the different packages you need to use
   ```
   library(readr)
