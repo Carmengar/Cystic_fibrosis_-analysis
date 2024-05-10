@@ -6,8 +6,7 @@
 
   # First, the taxonomy table "BuiltIn_taxa_refine" from Metalab results is imported to Rstudio:
 library(readr)
-BuiltIn_taxa_refine <- read_delim("K:/BuiltIn.taxa.refine.csv", 
-                                    delim = ";", escape_double = FALSE, trim_ws = TRUE)
+BuiltIn_taxa_refine <- read_csv("K:/BuiltIn.taxa.refine.csv")
 View(BuiltIn_taxa_refine)
 
   # Load the packages
@@ -103,7 +102,7 @@ tax_table(phylum_other)
   # Species: only the 20 more abundant species.
 abund_table_species <- taxa_sums(speciesnotNA_relativ)
 namesother_species <- abund_table_species[order(abund_table_species)]
-namesother_species <- head(namesother_species, 113) # Total nº of species minus 20
+namesother_species <- head(namesother_species, 113) # Total nÂº of species minus 20
 namesother_species <- names(namesother_species)
 namesother_species
       # Merge of these taxa in another category named "Other"
