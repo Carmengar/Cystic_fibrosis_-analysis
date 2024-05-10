@@ -1,9 +1,9 @@
 # Code used for the metaproteomic analysis of cystic fibrosis microbiota samples
-The code used in the analysis and visualization of metaproteomics data of cystic fibrosis microbiota samples using Rstudio is described below. [Phyloseq package](https://joey711.github.io/phyloseq/) was used as the main tool. The R script can be found [here](RscriptMRA.R).
+The code used in the analysis and visualization of metaproteomic data of cystic fibrosis microbiota samples using Rstudio is described below. [Phyloseq package](https://joey711.github.io/phyloseq/) was used as the main tool. The R script can be found [here](RscriptMRA.R).
 
 ## Creating the physeq object
-The raw MS proteomics data have been submitted to the [ProteomeXchange Consortium](http://www.proteomexchange.org) via the Proteomics Identifications Database (PRIDE) partner repository, with the database identifier [PXD029284](https://www.ebi.ac.uk/pride/archive/projects/PXD029284) [^1].
-The peptide, protein and taxonomic identification and quantification was performed using Metalab software [^2]. Here, the **BuiltIn_taxa_refine** file from Metalab results is used to performed the analysis in Rstudio. This file contains the identified taxa with at least 2 unique peptides. 
+The raw MS proteomic data have been submitted to the [ProteomeXchange Consortium](http://www.proteomexchange.org) via the Proteomics Identifications Database (PRIDE) partner repository, with the database identifier [PXD029284](https://www.ebi.ac.uk/pride/archive/projects/PXD029284) [^1].
+The peptide and protein identification and quantification as well as the taxonomic and functional analysis was performed using Metalab software [^2]. The **BuiltIn_taxa_refine** file from Metalab results is used to performed the analysis in Rstudio. This file contains the identified taxa with at least 2 unique peptides. 
 - Load the different packages you need to use
   ```
   library(readr)
