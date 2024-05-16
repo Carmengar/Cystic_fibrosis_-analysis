@@ -93,10 +93,6 @@ In order to continue the analysis a preprocessing step is needed to prepare the 
   human <- c("Chordata")
   physeq = subset_taxa(physeq, !Phylum %in% human)
   ```
-- Remove those taxa with a sum intensity equal 0 (because we remove *human* taxa). Just in case.
-  ```
-  physeq <- filter_taxa(physeq, function(x) sum(x) > 0, TRUE)
-  ```
 - Split taxonomic ranks
   In the *BuiltIn_taxa_refine* file all taxa of different taxonomic ranks are mixed together so we need to split the ranks into different phyloseq objects. In this case we are only going to need *Phylum* and *Species* levels.
   - Phylum
