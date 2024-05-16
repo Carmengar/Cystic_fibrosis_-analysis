@@ -57,9 +57,6 @@ sample_data(physeq)$Patient <- factor(sample_data(physeq)$Patient)
 human <- c("Chordata")
 physeq = subset_taxa(physeq, !Phylum %in% human)
 
-  # Remove those taxa with a sum intensity equal 0 (because we remove human taxa). Just in case.
-physeq <- filter_taxa(physeq, function(x) sum(x) > 0, TRUE)
-
   # Because in metaproteomics data, all taxonomics ranks are mixed together, we need to
   # split them into different phyloseq objects (in this case in phylum and species level).
 
